@@ -27,11 +27,19 @@ export class StudentListComponent implements OnInit {
     studentid: "B141421Q"},
     {address: "Johor Bahru", course: "Banking and Finance", dob: "1997-05-19", econtactname: "Lee Siang How",
     econtactnumber: "01123456678",
-    email: "yenthong89@gmail.com",
-    fullname: "Lee Yen Thong",
+    email: "jicheng89@gmail.com",
+    fullname: "Yong Ji Cheng",
     identity: "970515235087",
     phone: "0146118233",
     remark: "Allergic to seafood",
+    studentid: "B141421Q"},
+    {address: "Johor Bahru", course: "Banking and Finance", dob: "1997-05-19", econtactname: "Lee Siang How",
+    econtactnumber: "01123456678",
+    email: "lala@gmail.com",
+    fullname: "Lala",
+    identity: "970515235087",
+    phone: "011123456789",
+    remark: "",
     studentid: "B141421Q"}
   ];
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
