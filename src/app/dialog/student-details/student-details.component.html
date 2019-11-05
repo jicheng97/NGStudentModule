@@ -1,0 +1,98 @@
+<mat-dialog-content>
+<h3 class="text-center mb-4">{{name}}'s Details</h3>
+<form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
+<div class="row">
+        <div class="col-sm-12 col-md-6">
+            
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input matInput name="fullname" (keyup)="validate($event.target.value, 'fullname');"  disabled ngModel={{fullname}} required>
+            <mat-hint *ngIf="fullNameIsEmpty" class="hint-text">Full Name is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>IC / Passport</mat-label>
+            <input matInput name="identity" (keyup)="validate($event.target.value, 'identity');" disabled ngModel={{identity}} required>
+            <mat-hint *ngIf="identityIsEmpty" class="hint-text">IC / Passport is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput type="date" name="dob" (keyup)="validate($event.target.value, 'dob');" disabled ngModel={{dob}} required>
+            <mat-hint *ngIf="dobIsEmpty" class="hint-text">Date of Birth is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input type="email" matInput name="email" (keyup)="validate($event.target.value, 'email');" disabled ngModel={{email}} required>
+            <mat-hint *ngIf="emailIsEmpty" class="hint-text">E-mail is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput name="phone" (keyup)="validate($event.target.value, 'phone');" disabled ngModel={{phone}} required>
+            <mat-hint *ngIf="phoneIsEmpty" class="hint-text">Phone Number is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Student ID</mat-label>
+            <input  matInput name="studentid" (keyup)="validate($event.target.value, 'studentid');" disabled ngModel={{studentid}} required>
+            <mat-hint *ngIf="idIsEmpty" class="hint-text">Student ID is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Course</mat-label>
+            <input  matInput name="course" (keyup)="validate($event.target.value, 'course');" disabled ngModel={{course}} required>
+            <mat-hint *ngIf="courseIsEmpty" class="hint-text">Course is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Address</mat-label>
+            <input  matInput name="address" (keyup)="validate($event.target.value, 'address');" disabled ngModel={{address}} required>
+            <mat-hint *ngIf="addressIsEmpty" class="hint-text">Address is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Emergency Contact Name</mat-label>
+            <input matInput name="econtactname" (keyup)="validate($event.target.value, 'econtactname');" disabled ngModel={{econtactname}} required>
+            <mat-hint *ngIf="eContactIsEmpty" class="hint-text">Emergency Contact Name is Required</mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Emergency Contact Number</mat-label>
+            <input matInput name="econtactnumber" (keyup)="validate($event.target.value, 'econtactnumber');" disabled ngModel={{econtactnumber}} required>
+            <mat-hint *ngIf="ePhoneIsEmpty" class="hint-text">Emergency Contact Number is Required</mat-hint>
+          </mat-form-field>
+        </div>
+      
+        <div class="col-12">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Remarks</mat-label>
+          <textarea matInput name="remark" disabled ngModel={{remark}}></textarea>
+        </mat-form-field>
+        </div>
+
+        </div>
+</form>     
+</mat-dialog-content>
+<mat-dialog-actions>
+<button mat-raised-button mat-dialog-close tabindex="-1" class="btn-red right">Close</button>
+</mat-dialog-actions>
